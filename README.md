@@ -16,9 +16,9 @@ Each solution is provided in a separate Java file, named according to the specif
 
 ```plaintext
 .
-├── Problem1.java
-├── Problem2.java
-├── Problem3.java
-├── Problem4.java
+├── Challenge1.java
+├── Challenge2.java
+├── Challenge3.java
+├── Challenge4.java
 ...
-└── ProblemN.java
+└── Challenge10.java
