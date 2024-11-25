@@ -1,4 +1,10 @@
-//Write a program to print the respective month name based on given input
+//Write a C program to input basic Salary of an employee and calculate its gross salary according to following:
+
+//Basic Salary <= 10000 : HRA = 20%, DA=80%
+
+//Basic Salary <= 20000 : HRA = 25%, DA=90%
+
+//Basic Salary > 20000 : HRA = 30%, DA=95%
 
 import java.util.*;
 
@@ -6,47 +12,31 @@ public class Challenge10 {
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        int a = sc.nextInt();
-        switch(a){
-        case(1):
-                System.out.println("January");
-                break;
-        case(2):
-                System.out.println("February");
-                break;
-        case(3):
-                System.out.println("March");
-                break;
-        case(4):
-                System.out.println("April");
-                break;
-        case(5):
-                System.out.println("May");
-                break;
-        case(6):
-                System.out.println("June");
-                break;
-        case(7):
-                System.out.println("July");
-                break;
-        case(8):
-                System.out.println("August");
-                break;
-        case(9):
-                System.out.println("September");
-                break;
-        case(10):
-                System.out.println("October");
-                break;
-        case(11):
-                System.out.println("November");
-                break;
-        case(12):
-                System.out.println("December");
-                break;
-        default:
-                System.out.print("Invalid");
-                
+        int Sal = sc.nextInt();
+        double HRA =0.0;
+        double DA = 0.0, GrossSal=0.0;
+        
+        if(Sal <= 10000){
+            HRA = 0.20 *Sal;
+            DA = 0.80 * Sal;
         }
+        
+        else if(Sal <= 20000){
+            HRA = 0.25 * Sal;
+            DA = 0.90 * Sal;
+        }
+        
+        else if(Sal > 20000){
+            HRA = 0.30 * Sal;
+            DA = 0.95 * Sal;
+        }
+        
+        else{
+            System.out.println("Invalid Input");
+        }
+        
+        GrossSal =  Sal + HRA+ DA; 
+        System.out.printf("Rs.%.2f", GrossSal);
     }
 }
+
